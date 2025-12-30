@@ -1,18 +1,18 @@
-﻿# SRP - Single Responsibility Principle
+# SRP - Single Responsibility Principle
 
-SRP dice que una clase debe tener una sola razon para cambiar.
-En otras palabras: un modulo debe tener una unica responsabilidad clara.
+SRP dice que una clase debe tener una sola razón para cambiar.
+En otras palabras: un módulo debe tener una única responsabilidad clara.
 
-Analogia simple: en una cocina, quien cocina no deberia tambien llevar la contabilidad.
+analogía simple: en una cocina, quien cocina no debería también llevar la contabilidad.
 Si mezclas responsabilidades, cualquier cambio en una obliga a cambiar la otra.
 
-## Senales de violacion
-- La clase hace "de todo": calcula, formatea, guarda, envia.
-- Tiene muchas dependencias y muchos metodos heterogeneos.
+## Señales de violación
+- La clase hace "de todo": calcula, formatea, guarda, envía.
+- Tiene muchas dependencias y muchos métodos heterogéneos.
 - Cambios de formatos o de reglas de negocio impactan la misma clase.
 
-## Checklist rapido
-- Esta clase tiene una responsabilidad unica y clara?
+## Checklist rápido
+- Esta clase tiene una responsabilidad única y clara?
 - Puedo describirla con una frase corta sin usar "y"?
 - Si cambia el formato de salida, toco esta clase?
 - Si cambia la persistencia, toco esta clase?
@@ -24,3 +24,6 @@ Si mezclas responsabilidades, cualquier cambio en una obliga a cambiar la otra.
 - Good 02: `srp/good/ejemplo02/README.md`
 - Bad 03: `srp/bad/ejemplo03/README.md`
 - Good 03: `srp/good/ejemplo03/README.md`
+
+
+

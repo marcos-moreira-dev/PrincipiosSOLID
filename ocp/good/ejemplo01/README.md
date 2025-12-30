@@ -1,10 +1,10 @@
-﻿# OCP - Ejemplo 01 (good) - Descuentos con estrategias
+# OCP - Ejemplo 01 (good) - Descuentos con estrategias
 
-## Escenario (antes del codigo)
-La tienda define descuentos como politicas separadas. Para agregar un nuevo
+## Escenario (antes del código)
+La tienda define descuentos como políticas separadas. Para agregar un nuevo
 tipo de cliente, se crea una nueva clase que implementa la interfaz.
 
-## Como ejecutar
+## Cómo ejecutar
 ```bash
 javac Main.java
 java Main
@@ -16,18 +16,21 @@ java Main
 - DescuentoClienteNuevo/VIP/Regular: implementaciones.
 - CalculadoraDescuento.java: usa la interfaz.
 
-## Despues del codigo (explicacion por bloques)
+## Después del código (explicación por bloques)
 - PoliticaDescuento define el comportamiento esperado.
-- Cada politica encapsula su propia regla.
-- CalculadoraDescuento no cambia cuando aparece una politica nueva.
-- Main elige la politica adecuada, sin tocar la calculadora.
+- Cada política encapsula su propia regla.
+- CalculadoraDescuento no cambia cuando aparece una política nueva.
+- Main elige la política adecuada, sin tocar la calculadora.
 
-## Que huele mal
+## Qué huele mal
 - No hay olor fuerte. El comportamiento se extiende con nuevas clases.
 
-## Que cambiaria si el requisito cambia
+## Qué cambiaria si el requisito cambia
 - Nuevo tipo de cliente: se agrega una nueva clase.
-- Cambio de regla VIP: se edita solo esa politica.
+- Cambio de regla VIP: se edita solo esa política.
 
-## Por que este diseno escala mejor
-Escala mejor porque el codigo central no se modifica cuando el negocio crece.
+## Por qué este diseño escala mejor
+Escala mejor porque el código central no se modifica cuando el negocio crece.
+
+
+

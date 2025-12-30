@@ -1,19 +1,19 @@
-﻿# ISP - Interface Segregation Principle
+# ISP - Interface Segregation Principle
 
-ISP dice que no se debe obligar a un cliente a depender de metodos
-que no usa. Es mejor tener interfaces pequenas y especificas.
+ISP dice que no se debe obligar a un cliente a depender de métodos
+que no usa. Es mejor tener interfaces pequeñas y específicas.
 
-Analogia: un control remoto enorme con botones que nunca usas es peor
-que un control pequeno con lo esencial para ti.
+analogía: un control remoto enorme con botones que nunca usas es peor
+que un control pequeño con lo esencial para ti.
 
-## Senales de violacion
-- Interfaces gigantes con muchos metodos.
-- Implementaciones vacias o que lanzan excepciones.
+## Señales de violación
+- Interfaces gigantes con muchos métodos.
+- Implementaciones vacías o que lanzan excepciones.
 - Clases que "fingen" soportar funciones.
 
-## Checklist rapido
-- Esta interfaz tiene metodos no usados por algun cliente?
-- Podria dividirse en contratos mas pequenos?
+## Checklist rápido
+- Esta interfaz tiene métodos no usados por algún cliente?
+- Podría dividirse en contratos más pequeños?
 - Implementaciones que devuelven "no aplica"?
 
 ## Ejemplos
@@ -23,3 +23,6 @@ que un control pequeno con lo esencial para ti.
 - Good 02: `isp/good/ejemplo02/README.md`
 - Bad 03: `isp/bad/ejemplo03/README.md`
 - Good 03: `isp/good/ejemplo03/README.md`
+
+
+

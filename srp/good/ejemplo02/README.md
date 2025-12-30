@@ -1,11 +1,11 @@
-﻿# SRP - Ejemplo 02 (good) - Usuario con responsabilidades separadas
+# SRP - Ejemplo 02 (good) - Usuario con responsabilidades separadas
 
-## Escenario (antes del codigo)
+## Escenario (antes del código)
 El registro de usuarios ahora tiene piezas independientes: validar, formatear
 y notificar. Cada pieza tiene su propio motivo de cambio. Esto evita que
-una modificacion de formato afecte la logica de validacion.
+una modificación de formato afecte la lógica de validación.
 
-## Como ejecutar
+## Cómo ejecutar
 ```bash
 javac Main.java
 java Main
@@ -18,21 +18,24 @@ java Main
 - FormateadorUsuario.java: presentacion.
 - ServicioEmail.java: envio.
 
-## Despues del codigo (explicacion por bloques)
+## Después del código (explicación por bloques)
 - ValidadorUsuario se concentra en reglas; no sabe nada de emails.
-- FormateadorUsuario produce un mensaje, sin conocer a quien se envia.
-- ServicioEmail solo envia lo que recibe, sin logica de negocio.
+- FormateadorUsuario produce un mensaje, sin conocer a quien se envía.
+- ServicioEmail solo envía lo que recibe, sin lógica de negocio.
 - Main coordina los pasos, pero no los mezcla.
 
-## Que huele mal
-- No hay olor fuerte. Las responsabilidades estan separadas.
+## Qué huele mal
+- No hay olor fuerte. Las responsabilidades están separadas.
 - Si aparece acoplamiento, se detecta facilmente porque rompe la separacion.
 
-## Que cambiaria si el requisito cambia
-- Nueva validacion: cambia ValidadorUsuario.
+## Qué cambiaria si el requisito cambia
+- Nueva validación: cambia ValidadorUsuario.
 - Nuevo formato: cambia FormateadorUsuario.
 - Nuevo canal: aparece un nuevo servicio, sin tocar los otros.
 
-## Por que este diseno escala mejor
+## Por qué este diseño escala mejor
 Escala mejor porque cada cambio se limita a una clase y los tests se pueden
-escribir en unidades pequenas y aisladas.
+escribir en unidades pequeñas y aisladas.
+
+
+

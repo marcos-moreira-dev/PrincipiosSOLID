@@ -1,18 +1,18 @@
-﻿# OCP - Open/Closed Principle
+# OCP - Open/Closed Principle
 
-OCP dice que una entidad debe estar abierta para extension,
-pero cerrada para modificacion. Es decir: agregar funcionalidad
-sin tocar el codigo existente.
+OCP dice que una entidad debe estar abierta para extensión,
+pero cerrada para modificación. Es decir: agregar funcionalidad
+sin tocar el código existente.
 
-Analogia: una toma de corriente permite conectar nuevos aparatos
-sin reescribir la instalacion electrica.
+analogía: una toma de corriente permite conectar nuevos aparatos
+sin reescribir la instalación eléctrica.
 
-## Senales de violacion
+## Señales de violación
 - if/else o switch por tipo en muchos lugares.
 - Cada nuevo caso obliga a modificar la clase central.
 - Los cambios se dispersan en archivos muy usados.
 
-## Checklist rapido
+## Checklist rápido
 - Para agregar un nuevo caso, tengo que editar una clase central?
 - Puedo agregar comportamiento creando una nueva clase?
 - El flujo principal depende de una interfaz?
@@ -24,3 +24,6 @@ sin reescribir la instalacion electrica.
 - Good 02: `ocp/good/ejemplo02/README.md`
 - Bad 03: `ocp/bad/ejemplo03/README.md`
 - Good 03: `ocp/good/ejemplo03/README.md`
+
+
+

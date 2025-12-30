@@ -1,10 +1,10 @@
-﻿# ISP - Ejemplo 02 (good) - Dispositivos con contratos separados
+# ISP - Ejemplo 02 (good) - Dispositivos con contratos separados
 
-## Escenario (antes del codigo)
+## Escenario (antes del código)
 Se separan las capacidades de imprimir, escanear y fax. Cada dispositivo
 implementa solo lo que realmente soporta.
 
-## Como ejecutar
+## Cómo ejecutar
 ```bash
 javac Main.java
 java Main
@@ -12,21 +12,24 @@ java Main
 
 ## Archivos
 - Main.java: orquesta.
-- Imprimible/Escaneable/Faxable: contratos pequenos.
+- Imprimible/Escaneable/Faxable: contratos pequeños.
 - ImpresoraSimple.java: solo imprime.
-- Multifuncion.java: imprime, escanea y envia fax.
+- Multifuncion.java: imprime, escanea y envía fax.
 
-## Despues del codigo (explicacion por bloques)
-- ImpresoraSimple no tiene metodos que no usa.
+## Después del código (explicación por bloques)
+- ImpresoraSimple no tiene métodos que no usa.
 - Multifuncion implementa todos los contratos.
 - Main utiliza interfaces adecuadas segun la necesidad.
 
-## Que huele mal
-- No hay olor fuerte; no hay metodos "no soportados".
+## Qué huele mal
+- No hay olor fuerte; no hay métodos "no soportados".
 
-## Que cambiaria si el requisito cambia
+## Qué cambiaria si el requisito cambia
 - Nuevo dispositivo solo implementa sus capacidades.
-- Nuevo metodo de fax no afecta impresoras simples.
+- Nuevo método de fax no afecta impresoras simples.
 
-## Por que este diseno escala mejor
+## Por qué este diseño escala mejor
 Escala mejor porque cada clase depende solo de contratos necesarios.
+
+
+

@@ -1,11 +1,11 @@
-﻿# SRP - Ejemplo 01 (good) - Factura separada por responsabilidades
+# SRP - Ejemplo 01 (good) - Factura separada por responsabilidades
 
-## Escenario (antes del codigo)
+## Escenario (antes del código)
 La misma tienda ahora separa el calculo, el formateo y el guardado.
 Cada parte cambia por motivos distintos: reglas de negocio, presentacion
-y persistencia. Separarlas evita que un cambio arrastre a los demas.
+y persistencia. Separarlas evita que un cambio arrastre a los demás.
 
-## Como ejecutar
+## Cómo ejecutar
 ```bash
 javac Main.java
 java Main
@@ -18,22 +18,25 @@ java Main
 - FormateadorFactura.java: salida en texto.
 - RepositorioFactura.java: persistencia simulada.
 
-## Despues del codigo (explicacion por bloques)
+## Después del código (explicación por bloques)
 - Factura solo mantiene datos y permite agregar items.
 - CalculadoraFactura solo calcula totales, sin saber nada de archivos.
 - FormateadorFactura genera texto y no conoce el almacenamiento.
 - RepositorioFactura guarda un string ya listo.
 - Main orquesta, pero cada clase tiene un rol claro y reemplazable.
 
-## Que huele mal
-- No hay olor fuerte; las responsabilidades estan separadas.
+## Qué huele mal
+- No hay olor fuerte; las responsabilidades están separadas.
 - Si apareciera un olor, seria porque una clase nueva empieza a mezclar tareas.
 
-## Que cambiaria si el requisito cambia
+## Qué cambiaria si el requisito cambia
 - Si cambia el formato, solo cambia FormateadorFactura.
 - Si cambia el almacenamiento, solo cambia RepositorioFactura.
 - Si cambian los impuestos, solo cambia CalculadoraFactura.
 
-## Por que este diseno escala mejor
-Escala mejor porque cada responsabilidad crece en su propio modulo,
+## Por qué este diseño escala mejor
+Escala mejor porque cada responsabilidad crece en su propio módulo,
 y los cambios no se propagan a las otras partes.
+
+
+

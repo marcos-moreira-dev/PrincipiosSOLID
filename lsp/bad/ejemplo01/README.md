@@ -1,11 +1,11 @@
-﻿# LSP - Ejemplo 01 (bad) - Rectangulo y Cuadrado
+# LSP - Ejemplo 01 (bad) - Rectangulo y Cuadrado
 
-## Escenario (antes del codigo)
-El ejemplo clasico: un Cuadrado hereda de Rectangulo.
+## Escenario (antes del código)
+El ejemplo clásico: un Cuadrado hereda de Rectangulo.
 La clase base permite setear ancho y alto por separado.
 El Cuadrado rompe esa expectativa al obligar ambos valores a ser iguales.
 
-## Como ejecutar
+## Cómo ejecutar
 ```bash
 javac Main.java
 java Main
@@ -16,18 +16,21 @@ java Main
 - Rectangulo.java: clase base.
 - Cuadrado.java: subclase que cambia el contrato.
 
-## Despues del codigo (explicacion por bloques)
+## Después del código (explicación por bloques)
 - Rectangulo permite setAncho y setAlto independientes.
 - Cuadrado sobrescribe y fuerza ambos lados iguales.
-- Main espera area = ancho * alto. Con Cuadrado, eso falla.
+- Main espera área = ancho * alto. Con Cuadrado, eso falla.
 
-## Que huele mal
-- Subclase cambia el significado de metodos base.
+## Qué huele mal
+- Subclase cambia el significado de métodos base.
 - El cliente obtiene resultados inesperados.
 
-## Que cambiaria si el requisito cambia
-- Si agregas validaciones en Rectangulo, el Cuadrado puede romperse mas.
+## Qué cambiaria si el requisito cambia
+- Si agregas validaciones en Rectangulo, el Cuadrado puede romperse más.
 - Si el cliente asume independencia de lados, falla.
 
-## Por que este diseno escala mejor
+## Por qué este diseño escala mejor
 No escala mejor. La herencia es incorrecta y genera comportamientos sorpresivos.
+
+
+
